@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Roman to Integer", "Roman to Integer\Roman to Integer.csproj", "{90B937C6-D342-40E6-9579-80EC6FED9A20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Roman to Integer", "Roman to Integer\Roman to Integer.csproj", "{90B937C6-D342-40E6-9579-80EC6FED9A20}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject1", "TestProject1\TestProject1.csproj", "{49239ABF-17EC-4646-BF7C-519ECC4E9354}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestProject1", "TestProject1\TestProject1.csproj", "{49239ABF-17EC-4646-BF7C-519ECC4E9354}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Roman to Integer.Test", "Roman to Integer.Test\Roman to Integer.Test.csproj", "{FE735F22-5905-4441-B271-BA48D904E27A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{49239ABF-17EC-4646-BF7C-519ECC4E9354}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49239ABF-17EC-4646-BF7C-519ECC4E9354}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49239ABF-17EC-4646-BF7C-519ECC4E9354}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE735F22-5905-4441-B271-BA48D904E27A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE735F22-5905-4441-B271-BA48D904E27A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE735F22-5905-4441-B271-BA48D904E27A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE735F22-5905-4441-B271-BA48D904E27A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

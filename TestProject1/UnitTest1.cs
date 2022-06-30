@@ -21,7 +21,7 @@ namespace TestProject1
         [DataRow("MDCCCXCIV", 1894)]
         [DataRow("MMXVIII", 2018)]
 
-        public void TestMethod1(string s, int expected)
+        public void MSUnitTest(string s, int expected)
         {
             Solution sol = new Solution();
             //int result = sol.RomanToInt(s);
