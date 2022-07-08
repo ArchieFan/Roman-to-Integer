@@ -3,7 +3,7 @@
     public int RomanToInt(string s)
     {
         int result = 0;
-        
+
         Dictionary<char, int> map = new Dictionary<char, int>();
         map.Add('I', 1);
         map.Add('V', 5);
@@ -16,17 +16,20 @@
         char[] ch = s.Trim().ToCharArray();
         for (int i = 0; i < ch.Length; i++)
         {
-            if ((i+1) == ch.Length)
+            if ((i + 1) == ch.Length)
             {
                 result = result + map[ch[i]];
-            } else if (map[ch[i]] > map[ch[i+1]])
+            }
+            else if (map[ch[i]] > map[ch[i + 1]])
             {
                 result = result + map[ch[i]];
-            } else if (map[ch[i]] < map[ch[i+1]])
+            }
+            else if (map[ch[i]] < map[ch[i + 1]])
             {
-                result = result + (map[ch[i+1]] - map[ch[i]]);
+                result = result + (map[ch[i + 1]] - map[ch[i]]);
                 i++;
-            } else if (map[ch[i]] == map[ch[i + 1]])
+            }
+            else if (map[ch[i]] == map[ch[i + 1]])
             {
                 result = result + map[ch[i]];
             }
@@ -67,6 +70,28 @@
 
         return solution;
     }
+
+    public int RomanToInt3(string s)
+    {
+        Dictionary<char, int> roman = new Dictionary<char, int>()
+        {
+            { 'I', 1 },{ 'V', 5 },{ 'X', 10 },{ 'L', 50 },{ 'C', 100 },{ 'D', 500 },{ 'M', 1000 }
+        };
+        int res = 0;
+        for (int i = 0; i < s.Length; i++)
+        {
+            // (i + 1) < s.Length to make sure there is value come after the current pointer
+            // and check if next roman is greater than current roman 
+            if ((i + 1) < s.Length && roman[s[i]] < roman[s[i + 1]]) 
+            {
+                res -= roman[s[i]];
+            } else
+            {
+                res += roman[s[i]];
+            }
+        }
+        return res;
+    }
     static void Main()
     {
         //string s = "I";
@@ -76,6 +101,10 @@
         string s = "MCMXCIV";
         Solution sol = new Solution();
         Console.WriteLine(sol.RomanToInt(s));
+
+        Console.WriteLine(sol.RomanToInt2(s));
+
+        Console.WriteLine(sol.RomanToInt3(s));
 
     }
 }
